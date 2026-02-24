@@ -22,12 +22,12 @@ Array.prototype.myMap = function (callback) {
   // callback should be a function
 
   if(this==null || this==undefined){
-    throw new Error(`No array Found`)
+    throw new TypeError(`No array Found`)
   }
 
   if (Array.isArray(this)) {
     if (typeof callback !== "function") {
-      throw new Error(`The callback is not a function`);
+      throw new TypeError(`The callback is not a function`);
     }
 
     let results = [];
@@ -40,11 +40,13 @@ Array.prototype.myMap = function (callback) {
   }
 
   else{
-     throw new Error(`No array Found`)
+     throw new TypeError(`No array Found`)
   }
 };
 
 let nums = [];
+
+let a = 10
 
 
 
